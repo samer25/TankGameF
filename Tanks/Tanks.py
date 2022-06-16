@@ -7,5 +7,5 @@ class TankInterface(ABC):
     def redraw(self, screen):
         pass
 
-    def hit(self):  # This will display when the enemy is hit
+    def hit(self):
         print('hit')

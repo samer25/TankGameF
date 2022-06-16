@@ -54,11 +54,11 @@ def game_run():
                 bullets.pop(bullets.index(bullet))
             """Bullet collision with enemy"""
             if bullet.y - bullet.radius < enemy.hitbox[1] + enemy.hitbox[3] and bullet.y + bullet.radius > enemy.hitbox[
-                1]:  # Checks x coords
+                1]:
                 if bullet.x + bullet.radius > enemy.hitbox[0] and bullet.x - bullet.radius < enemy.hitbox[0] + \
-                        enemy.hitbox[2]:  # Checks y coords
-                    enemy.hit()  # calls enemy hit method
-                    bullets.pop(bullets.index(bullet))  # removes bullet from bullet list
+                        enemy.hitbox[2]:
+                    enemy.hit()
+                    bullets.pop(bullets.index(bullet))
 
         if keys[pygame.K_SPACE]:
             if len(bullets) < 1:
@@ -80,11 +80,11 @@ def game_run():
             """Bullet collision with player"""
             if bullet.y - bullet.radius < player.hitbox[1] + player.hitbox[3] and bullet.y + bullet.radius > \
                     player.hitbox[
-                        1]:  # Checks x coords
+                        1]:
                 if bullet.x + bullet.radius > player.hitbox[0] and bullet.x - bullet.radius < player.hitbox[0] + \
-                        player.hitbox[2]:  # Checks y coords
-                    player.hit()  # calls enemy hit method
-                    e_bullets.pop(e_bullets.index(bullet))  # removes bullet from bullet list
+                        player.hitbox[2]:
+                    player.hit()
+                    e_bullets.pop(e_bullets.index(bullet))
 
         if len(e_bullets) < 1:
             e_bullets.append(

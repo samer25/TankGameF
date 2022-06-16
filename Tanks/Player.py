@@ -15,8 +15,8 @@ class Player(TankInterface):
     def redraw(self, screen):
         """putting character in the screen with position(x, y)"""
         screen.blit(self.character_img, (self.position_y, self.position_x))
-        self.hitbox = (self.position_y + 17, self.position_x + 11, 29, 52)  # NEW
-        pygame.draw.rect(screen, (255, 0, 0), self.hitbox, 2)  # To draw the hit box around the player
+        self.hitbox = (self.position_y + 17, self.position_x + 11, 29, 52)
+        pygame.draw.rect(screen, (255, 0, 0), self.hitbox, 2)
 
     def health_bar(self, screen):
         pass
